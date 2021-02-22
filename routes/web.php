@@ -19,9 +19,8 @@ Route::get('/', function () {
 Route::get('/test', function () {
     return view('welcome');
 });
-Route::get('/route-ex', function () {
-    return "Web programming";
-});
-Route::get('/redirect-ex', function () {
-    return redirect("/test");
-});
+Route::get('/named/{id}', 'StudentController@index');
+
+Route::get('/dtob/{date}', 'StudentController@index1');
+
+Route::get('/age/{age}', 'StudentController@index2');
